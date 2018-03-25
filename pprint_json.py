@@ -1,3 +1,4 @@
+import sys
 import json
 
 
@@ -11,6 +12,6 @@ def pretty_print_json(data):
 
 
 if __name__ == '__main__':
-    filepath = "alco.json"
+    filepath = sys.argv[1]
     data = load_data(filepath)
     pretty_print_json(data)
