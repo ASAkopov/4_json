@@ -3,15 +3,23 @@ import json
 
 
 def load_data(filepath):
-           with open(filepath, 'r') as file_object:
+    try:
+        with open(filepath, 'r') as file_object:
             json_data = json.load(file_object)
         return json_data
-         
-        
+    except IOError:
+        print("Не удалось открыть файл.")
+    except ValueError:
+        print("Не удалось десериализировать json. Возможно несоответсвие формату")
+
+
 def pretty_print_json(json_data):
     print(json.dumps(
-                    json_data, ensure_ascii=False,
-                    indent=4, sort_keys=True))
+        json_data,
+        ensure_ascii=False,
+        indent=4,
+        sort_keys=True,
+    ))
 
 
 if __name__ == '__main__':
