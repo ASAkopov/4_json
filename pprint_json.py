@@ -3,11 +3,11 @@ import json
 
 
 def load_data(filepath):
-    with open(filepath, 'r') as fid:
-        json_data = json.load(fid)
-    return json_data
-
-
+           with open(filepath, 'r') as file_object:
+            json_data = json.load(file_object)
+        return json_data
+         
+        
 def pretty_print_json(json_data):
     print(json.dumps(
                     json_data, ensure_ascii=False,
