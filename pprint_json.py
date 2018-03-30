@@ -5,14 +5,9 @@ import json
 
 
 def load_data(filepath):
-    try:
-        with open(filepath, 'r') as file_object:
-            json_object = json.load(file_object)
-        return json_object
-    except IOError:
-        print(u"Не удалось открыть файл.")
-    except ValueError:
-        print(u"Не удалось десериализировать json. Возможно несоответсвие формату")
+    with open(filepath, 'r') as file_object:
+        json_object = json.load(file_object)
+    return json_object
 
 
 def pretty_print_json(data):
@@ -30,9 +25,9 @@ if __name__ == '__main__':
         try:
             jsonobject = load_data(file_path)
         except IOError:
-            print(u"Не удалось открыть файл.")
+            print(u"Can not open file.")
         except ValueError:
-            print(u"Не удалось десериализировать json. Возможно несоответсвие формату")
+            print(u"Impossiple to deserialize JSON. Possible inconsistency with format")
         else:
             pretty_print_json(jsonobject)
     else:
