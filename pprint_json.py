@@ -27,8 +27,8 @@ if __name__ == '__main__':
         except IOError:
             print(u"Can not open file.")
         except ValueError:
-            print(u"Impossiple to deserialize JSON. Possible inconsistency with format")
+            print(u"Impossiple to deserialize JSON. Possible inconsistency with format.")
         else:
             pretty_print_json(jsonobject)
     else:
-        print(u"Не указан файл json.")
+        print(u"Filepath was not specified.")
