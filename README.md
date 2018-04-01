@@ -7,6 +7,8 @@ The code prints data from JSON-formatted file into standard output in a user-fri
 
 Example of script launch on Linux, Python 3.5:
 
+test.json can be found on GitHub: https://github.com/ASAkopov/test_files
+
 ```bash
 
 $ python pprint_json.py test.json
