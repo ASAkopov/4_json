@@ -1,5 +1,3 @@
-# -*-coding:utf-8-*-
-
 import sys
 import json
 
@@ -10,9 +8,9 @@ def load_data(filepath):
     return json_object
 
 
-def pretty_print_json(data):
+def pretty_print_json(object_to_print):
     print(json.dumps(
-        data,
+        object_to_print,
         ensure_ascii=False,
         indent=4,
         sort_keys=True,
