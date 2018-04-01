@@ -25,13 +25,13 @@ if __name__ == '__main__':
         try:
             jsonobject = load_data(file_path)
         except IOError:
-            print(u"Can not open file.")
+            print("Can not open file.")
         except ValueError:
             print(
-                u"""Impossiple to deserialize JSON. 
-                Possible inconsistency with format."""
+                "Impossiple to deserialize JSON. "\
+                "Possible inconsistency with format."
             )
         else:
             pretty_print_json(jsonobject)
     else:
-        print(u"Filepath was not specified.")
+        print("Filepath was not specified.")
