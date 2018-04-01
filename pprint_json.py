@@ -28,7 +28,7 @@ if __name__ == '__main__':
             print("Can not open file.")
         except ValueError:
             print(
-                "Impossiple to deserialize JSON. "\
+                "Impossiple to deserialize JSON. "
                 "Possible inconsistency with format."
             )
         else:
