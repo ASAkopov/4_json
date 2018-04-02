@@ -6,8 +6,8 @@ import json
 
 def load_data(filepath):
     with open(filepath, "r") as file_object:
-        json_object = json.load(file_object)
-    return json_object
+        python_object = json.load(file_object)
+    return python_object
 
 
 def pretty_print_json(object_to_print):
@@ -25,7 +25,7 @@ if __name__ == "__main__":
         sys.exit(0)
     file_path = sys.argv[1]
     try:
-        jsonobject = load_data(file_path)
+        python_structure = load_data(file_path)
     except IOError:
         print("Can not open file.")
     except ValueError:
@@ -34,4 +34,4 @@ if __name__ == "__main__":
             "Possible inconsistency with format."
             )
     else:
-        pretty_print_json(jsonobject)
+        pretty_print_json(python_structure)
