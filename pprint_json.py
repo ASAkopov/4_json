@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import sys
 import json
 
@@ -21,11 +19,10 @@ def pretty_print_json(object_to_print):
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        print("Filepath was not specified.")
-        sys.exit(0)
+        sys.exit("Filepath was not specified.")
     file_path = sys.argv[1]
     try:
-        python_structure = load_data(file_path)
+        python_object = load_data(file_path)
     except IOError:
         print("Can not open file.")
     except ValueError:
@@ -34,4 +31,4 @@ if __name__ == "__main__":
             "Possible inconsistency with format."
             )
     else:
-        pretty_print_json(python_structure)
+        pretty_print_json(python_object)
